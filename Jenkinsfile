@@ -16,9 +16,9 @@ pipeline {
 				 sh "cd /mnt/jenkins-slave/"
 				 sh "wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.67/bin/apache-tomcat-9.0.67.zip "
 				 sh "unzip apache-tomcat-9.0.67.zip"
-				 sh "cd /apache-tomcat-9.0.67/"
+				 sh "cd apache-tomcat-9.0.67/"
 				 sh "chmod 777 bin"
-				 sh "cd bin"
+				 
 				 
 			       }
 		 }   
@@ -47,7 +47,8 @@ pipeline {
 				       }
 			      }
 			 steps {
-				 sh "cd /mnt//mnt/apache-tomcat-9.0.67/bin/"
+				 sh "cd /root"
+				 sh "cd /mnt/apache-tomcat-9.0.67/bin/"
 				 sh "./startup.sh"
 				 
 			       }
