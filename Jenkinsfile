@@ -39,7 +39,7 @@ pipeline {
 		stage ('copy file to node') {
 			
 					steps {
-						sh "scp -i /root/MyWS-1.pem /root/.jenkins/workspace/GOL-Deploy/gameoflife-web/target/gameoflife.war ec2-user@172.31.37.109:/mnt/jenkins-slave/project/apache-tomcat-9.0.67/webapps/"
+						sh "scp -i /root/MyWS-1.pem /root/.jenkins/workspace/GOL-Deploy/gameoflife-web/target/gameoflife.war ec2-user@172.31.37.109:/mnt/jenkins-slave/workspace/GOL-Deploy/apache-tomcat-9.0.67/webapps/"
 					      }
 					}
 		
