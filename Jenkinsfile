@@ -14,6 +14,7 @@ pipeline {
 			      }
 			 steps {
 				 sh "cd /mnt/jenkins-slave/"
+				 sh "rm -rf *"
 				 sh "wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.67/bin/apache-tomcat-9.0.67.zip "
 				 sh "unzip apache-tomcat-9.0.67.zip"
 				 sh "cd apache-tomcat-9.0.67/"
