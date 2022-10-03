@@ -21,7 +21,7 @@ pipeline {
 				 sh "cd bin"
 				 
 			       }
-				   
+		 }   
 		 stage ('mvn install') {
 				agent {
 				 label {
@@ -55,4 +55,4 @@ pipeline {
 	 }
 	
 }
-}
+
