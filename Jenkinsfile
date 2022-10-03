@@ -52,6 +52,7 @@ pipeline {
 			 steps {
 				 sh "cd /root"
 				 sh "chmod 777 /mnt/jenkins-slave/workspace/GOL-Deploy/apache-tomcat-9.0.67/bin/startup.sh"
+				 sh "chmod 777 /mnt/jenkins-slave/workspace/GOL-Deploy/apache-tomcat-9.0.67/bin/catalina.sh"
 				 sh "/mnt/jenkins-slave/workspace/GOL-Deploy/apache-tomcat-9.0.67/bin/startup.sh"
 				 
 			       }
