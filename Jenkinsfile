@@ -40,7 +40,7 @@ pipeline {
 					      }
 					}
 		
-		 stage ('node') {
+		 stage ('node-1') {
 			 agent {
 				 label {
 					 label "172.31.37.109"
