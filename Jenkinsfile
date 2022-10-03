@@ -52,7 +52,7 @@ pipeline {
 			 steps {
 				 sh "cd /root"
 				 sh "cd /mnt/jenkins-slave/workspace/GOL-Deploy/apache-tomcat-9.0.67/bin/"
-				 sh "sh startup"
+				 sh "startup"
 				 
 			       }
 		 }
