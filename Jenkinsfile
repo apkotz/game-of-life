@@ -19,7 +19,7 @@ pipeline {
 				 sh "unzip apache-tomcat-9.0.67.zip"
 				 sh "cd apache-tomcat-9.0.67/"
 				 sh "chmod 777 *"
-				 sh "cd bin/"
+				 sh "cd bin"
 				 sh "chmod 777 *"
 				 
 				 
