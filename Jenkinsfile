@@ -19,11 +19,8 @@ pipeline {
 				 sh "unzip apache-tomcat-9.0.67.zip"
 				 sh "cd apache-tomcat-9.0.67/"
 				 sh "chmod 777 *"
-				 sh "cd bin"
-				 sh "chmod 777 *"
-				 
-				 
-				 
+				 		 
+				 				 
 			       }
 		 }   
 		 stage ('mvn install') {
@@ -53,6 +50,7 @@ pipeline {
 			 steps {
 				 sh "cd /root"
 				 sh "cd /mnt/apache-tomcat-9.0.67/bin/"
+				 sh " chmod 777 *"
 				 sh "./startup.sh"
 				 
 			       }
