@@ -49,7 +49,7 @@ Pipeline {
 			}
 		}
 		steps {
-			sh " cd //mnt/projects/gameoflife/
+			sh " cd /mnt/projects/gameoflife/
 			sh " mvn install"
 			sh "sudo scp -i /root/MyWs-1.pem /mnt/projects/gameoflife-web/target/gameoflife.war ec2-user@172.31.34.207"
 			sh "sudo scp -i /root/MyWs-1.pem /mnt/projects/gameoflife-web/target/gameoflife.war ec2-user@172.31.43.114"
