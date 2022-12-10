@@ -6,6 +6,12 @@ Pipeline {
 			}
 		}
 		stages {
+		stage('dependency install'') {
+			steps {
+				sh " cd /mnt/projects/game-of-life/"
+				sh " mvn clean install"
+			}
+		}
 		stage ('deploy war on tomcat-node-1'){
 			agent {
 				label {
@@ -49,8 +55,7 @@ Pipeline {
 			}
 		}
 		steps {
-			sh " cd /mnt/projects/gameoflife/"
-			sh " mvn clean install"
+			
 			sh "sudo scp -i /root/MyWs-1.pem /mnt/projects/gameoflife-web/target/gameoflife.war ec2-user@172.31.34.207"
 			sh "sudo scp -i /root/MyWs-1.pem /mnt/projects/gameoflife-web/target/gameoflife.war ec2-user@172.31.43.114"
 			
