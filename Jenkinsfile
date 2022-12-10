@@ -1,30 +1,16 @@
 Pipeline {
-	agent none 
-	tools {
-		maven "maven3.0"
-		jdk "java1.8"
-	}
-	stages {
-		stage('git clone to master'){
 		agent {
 			label {
 				label "built-in"
 				customWorkspace "/mnt/projects"
 			}
 		}
-		environment {
-		PATH = "/root/maven/apache-maven-3.8.6/bin:$PATH"
-		}
-		steps {
-		sh "mvn install"
-		
-		}
-		}
+		stages {
 		stage ('deploy war on tomcat-node-1'){
 			agent {
 				label {
 					label "Node-1"
-					customWorkspace "/mnt"
+					
 				}
 			}
 			steps {
@@ -42,7 +28,7 @@ Pipeline {
 			agent {
 				label {
 					label "Node-2"
-					customWorkspace "/mnt"
+					
 				}
 			}
 			steps {
