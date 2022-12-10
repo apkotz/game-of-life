@@ -12,7 +12,7 @@ Pipeline {
 			maven "maven-3.8.6"
 		}
 		stages {
-		stage('dependency install'') {
+		stage('dependency install') {
 			steps {
 				sh " cd /mnt/projects/game-of-life/"
 				sh " mvn clean install"
