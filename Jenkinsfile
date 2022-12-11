@@ -19,7 +19,7 @@ pipeline {
 					stage ("build"){
 					
 						steps {
-								sh "cd /home/ec2-user/mnt/new/game-of-life && mvn clean install"
+								sh "cd /home/ec2-user/mnt/workspace/new/default/ && mvn clean install"
 								
 						}
 						
