@@ -2,17 +2,24 @@ Pipeline {
 		agent {
 			label {
 				label "built-in"
-				customWorkspace "/mnt/projects"
+				
 			}
-		}
-		tools {
-			maven "maven-3.8.6"
 		}
 		
 		stages {
+		stage ("git clone"){
+					
+						steps {
+								sh "rm -rf *"
+								sh "git clone https://github.com/apkotz/game-of-life.git"
+								
+						}
+						
+					}
+					
 		stage('dependency install') {
 			steps {
-				sh " cd /mnt/projects/game-of-life/"
+				sh " cd /root/.jenkins/workspace/War-deployement/game-of-life/"
 				sh " mvn clean install"
 			}
 		}
