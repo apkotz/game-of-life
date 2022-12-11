@@ -15,6 +15,15 @@ pipeline {
 			}
 
 			stages {
+				stage ("git clone"){
+					
+						steps {
+								sh "rm -rf *"
+								sh "git clone --single-branch --branch qa https://github.com/apkotz/game-of-life.git"
+								
+						}
+						
+					}
 					
 					
 					
