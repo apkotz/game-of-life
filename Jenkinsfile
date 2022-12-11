@@ -2,7 +2,7 @@ pipeline {
 			agent {
 					label {
 								label "Node-1"
-								customWorkspace "/home/ec2-user/mnt"
+								customWorkspace "/home/ec2-user/projects"
 						}
 			}
 			
@@ -15,25 +15,14 @@ pipeline {
 			}
 
 			stages {
-								
+					
+					
+					}
+					
 					stage ("build"){
 					
 						steps {
-								sh "cd /mnt/workspace/new/default && mvn clean install"
-								
-						}
-						
-					}
-					stage ("install tomcat"){
-					
-						steps {
-								sh "mkdir /home/ec2-user/mnt/servers"
-								sh "cd /home/ec2-user/mnt/servers"
-				
-								sh "sudo wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.70/bin/apache-tomcat-9.0.70.zip"
-								sh "sudo unzip apache-tomcat-9.0.70.zip"
-			
-								
+								sh "cd game-of-life && mvn clean install"
 								
 						}
 						
